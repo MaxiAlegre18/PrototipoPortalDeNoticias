@@ -1,0 +1,137 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1e2f;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 120px auto 40px auto;
+    background-color: #2c2c3e;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+input[type="text"],
+textarea,
+select {
+    padding: 10px 12px;
+    border: 1px solid #666;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #1e1e2f;
+    color: #ffffff;
+    resize: vertical;
+}
+
+input[type="file"] {
+    color: #ffffff;
+}
+
+button[type="submit"] {
+    padding: 12px;
+    background-color: #ff5722;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #e64a19;
+}
+
+
+button[type="button"] {
+    padding: 10px;
+    background-color: #666;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="button"]:hover {
+    background-color: #e64a19;
+}
+
+#dirForm {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #2c2c3e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    max-width: 600px;
+    width: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    color: #ffffff;
+}
+
+#dirForm h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+#dirList {
+    list-style: none; /* saca los puntitos */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#dirList li {
+    background-color: #ff5722;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    appearance: none;
+    display: block;
+}
+
+#dirList li:hover {
+    background-color: #e64a19;
+}
+
+@media (max-width: 768px) {
+    main {
+        margin: 100px 20px 20px 20px;
+        padding: 25px;
+    }
+}
+

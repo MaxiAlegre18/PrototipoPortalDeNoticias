@@ -1,0 +1,93 @@
+/* MODAL */
+
+.container-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 30, 47, 0.95);
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.container-modal.visible {
+    display: flex;
+}
+
+.container-modal .cerrar {
+    display: none;
+}
+
+.container-modal.visible .cerrar {
+    display: block;
+}
+
+.content-modal {
+    background: #ffffff;
+    color: #1e1e2f;
+    max-width: 90vw;
+    width: 1000px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    font-family: 'Segoe UI', Tahoma;
+    animation: aparecer 0.3s ease-out;
+}
+
+.cerrar {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: #ff5722;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.cerrar:hover {
+    color: #e64a19;
+    transform: scale(1.1);
+}
+
+#modalImg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#modalTitulo {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #1e1e2f;
+}
+
+#modalTema, #modalFecha {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #4d4d4d;
+}
+
+#modalDescripcion, #modalCuerpo {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* MAPA LEAFLET */
+#modalMapa {
+    height: 300px;
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}

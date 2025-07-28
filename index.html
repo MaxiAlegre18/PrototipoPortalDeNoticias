@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Municipio Web</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/detalleNoticia.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#"><img src="./img/malvinas-logo-sin-fondo.png" alt="Municipio Logo"></a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li id="inicio">Inicio</li>
+                    <li onclick="mostrarServicios()">Servicios</li>
+                    <li id="crear-noticia" onclick="irCrearNoticia()" hidden>Crear Noticia</li>
+                    <li id="cambiar-rol" data-rol="vecino" onclick="cambiarRol()">Cambiar a admin</li>
+                </ul>
+                <div class="barra-busqueda">
+                    <input id="input-busqueda" type="text" placeholder="Buscar...">
+                    <button type="button" onclick="buscarNoticia()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <main>
+        <section class="noticias-container" id="noticiasContainer"></section>
+
+        <div class="container-modal" id="container-modal">
+            <div class="content-modal" id="content-modal">
+                <span id="cerrarModal" class="cerrar">&times;</span>
+                <h2 id="modalTitulo"></h2>
+                <img id="modalImg">
+                <h4 id="modalTema"></h4>
+                <h4 id="modalFecha"></h4>
+                <p id="modalDescripcion"></p>
+                <p id="modalCuerpo"></p>
+                <p id="modalContenedorDireccion">
+                    <strong>Dirección:</strong> <span id="modalDireccion"></span>
+                </p>
+                <div id="modalMapa"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+    </footer>
+    <script src="./js/scriptDetalleNoticia.js"></script>
+    <script src="./js/scriptIndex.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Noticia</title>
+    <link rel="stylesheet" href="./css/crearNoticia.css">
+    <link rel="stylesheet" href="./css/detalleNoticia.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="./js/scriptDetalleNoticia.js"></script>
+    <script src="./js/scriptCrearNoticia.js"></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Crear Noticia</h1>
+        </header>
+        <section id="crearNoticia">
+            <form id="noticiaForm" onsubmit="tomarInformacionCrearNoticia(); return false">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required>
+
+                <label for="descripcion">Descripcion:</label>
+                <textarea id="descripcion" name="descripcion" required></textarea>
+
+                <label for="cuerpo">Cuerpo de la Noticia:</label>
+                <textarea id="cuerpo" name="cuerpo" required></textarea>
+
+                <label for="tema">Tema:</label>
+                <select id="tema" name="tema" required>
+                    <option value="deportes">Deportes</option>
+                    <option value="cultura">Cultura</option>
+                    <option value="tecnologia">Tecnología</option>
+                    <option value="salud">Salud</option>
+                    <option value="educacion">Educación</option>
+                    <option value="medioambiente">Medio Ambiente</option>
+                    <option value="comunidad">Comunidad</option>
+                    <option value="gobierno">Gobierno</option>
+                    <option value="seguridad">Seguridad</option>
+                </select>
+
+                <label for="fecha">Fecha:</label>
+                <input type="text" id="fecha" name="fecha" placeholder="Día-Mes-Año (Ejemplo: 09-05-2025)" required>
+
+                <label for="imagen">Imagen:</label>
+                <input type="file" id="imagen" name="imagen" accept="image/*" required>
+
+                <label for="dirección">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" placeholder="Calle(s), Altura, Localidad">
+                <button type="button" onclick="normalizarDireccion(event, 'direccion', 'dirList')">Buscar
+                    dirección</button>
+                <div id="dirForm">
+                    <ul id="dirList"></ul>
+                </div>
+
+                <button type="submit">Crear Noticia</button>
+            </form>
+        </section>
+        <div class="container-modal" id="container-modal">
+            <div class="content-modal" id="content-modal">
+                <span id="cerrarModal" class="cerrar">&times;</span>
+                <h2 id="modalTitulo"></h2>
+                <img id="modalImg">
+                <h4 id="modalTema"></h4>
+                <h4 id="modalFecha"></h4>
+                <p id="modalDescripcion"></p>
+                <p id="modalCuerpo"></p>
+                <p id="modalContenedorDireccion">
+                    <strong>Dirección:</strong> <span id="modalDireccion"></span>
+                </p>
+                <div id="modalMapa"></div>
+            </div>
+        </div>
+        </div>
+
+
+</body>
+
+
+
+
+</html>
