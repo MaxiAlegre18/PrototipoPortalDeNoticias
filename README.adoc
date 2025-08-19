@@ -1,0 +1,12 @@
+= Informe del prototipo del trabajo práctico de Ingeniería de Software
+
+== Introducción
+
+El siguiente informe tiene como objetivo presentar las funcionalidades que el usuario puede utilizar de la prueba de concepto del portal de noticias, así como también, se dará una breve explicación de los archivos que conforman al prototipo y las responsabilidades de cada uno.
+
+== Descripción
+
+La página de inicio contiene un encabezado, con tres botones y la barra de búsqueda. El primer botón corresponde al "Inicio" que consiste en volver a la página de incio y mostrar todas las noticias si es que el usuario realizó una búsqueda de noticias. El segundo es de "Servicios", no tiene funcionalidad, solamente tiene fines decorativos. El tercero corresponde al cambio de rol, si está en "Modo vecino", solo puede visualizar y buscar noticias. Si se cambia a "Modo admin", se habilita un botón nuevo que permite ir a la página de Crear Noticias. Respecto a la barra de búsqueda, el usuario puede ingresar una palabra clave o una frase y el sistema se actualizará con las noticias que coincidan con el texto ingresado y si no, se mostrará un mensaje de que no se han encontrando noticias que coincidan con la búsqueda. El cuerpo de la página contiene una vista previa de las noticias (ya creadas y guardadas), donde si se hace click a alguna, se abrirá una ventana de tipo modal que mostrará la noticia completa, con el título, imagen, descripción, cuerpo y si tiene dirección geografica, el mapa con la ubicación.
+
+
+La página de crear noticia, contiene un formulario donde se deben rellenar los campos para crear una noticia. Los campos necesarios para crear una noticia son; título, descripción, cuerpo, fecha e imagen. Si se desea, se puede agregar una dirección que se enviará al servicio normalizador de direcciones USIG. Luego, se mostraran las direcciones normalizadas devueltas por el servidor para que el usuario elija la correcta. Sólo se mostrarán las direcciones validas, es decir, que tengan calle y altura, sino se informará al usuario que la dirección es inválida o inexistente. Cuando los campos necesarios esten completados, el botón "Crear noticia" sería la responsable de crear la noticia, sin embargo, como se trata de una prueba de concepto, no se persiste la noticia. En su lugar, al hacer click, se mostrará una previsualización de como quedará la noticia, y si el usuario seleccionó una dirección normalizada con calle, altura y partido, se mostrará el mapa con la ubicación.
