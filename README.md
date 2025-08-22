@@ -2,6 +2,9 @@
 
 Prototipo de aplicación web para la **visualización y creación de noticias**, con integración de mapas interactivos mediante un **servicio externo REST** y renderizado con **Leaflet**.
 
+Este proyecto pertenece a la segunda entrega del trabajo practico de la materia Ingeniería de Software I. La primera parte consistió en el ánalisis de requerimientos, clasificación y diseño de un diagrama de casos de Uso. La segunda parte
+se debió desarrollar este prototipo donde posee solo algunas de las funcionalidades y la última entrega consistió en realizar un diagrama de arquitectura.
+
 ---
 
 ## Tecnologías utilizadas
