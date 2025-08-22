@@ -10,7 +10,6 @@ se debió desarrollar este prototipo donde posee solo algunas de las funcionalid
 ## Tecnologías utilizadas
 - **Frontend:** HTML, CSS, JavaScript  
 - **Mapas:** Normalización de direcciónes con servicio externo USIG, Visualización de mapas con libreria Leaflet.
-- **Control de versiones:** GitHub  
 
 ---
 
